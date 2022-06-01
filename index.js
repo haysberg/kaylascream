@@ -25,25 +25,32 @@ client.once('ready', () => {
 
 screamcount = 0
 
+const whitelist = ["Couaque#3615", "kayayluh#7905", "Meep#5585"]
+
 client.on('interactionCreate', async interaction => {
-	if (!interaction.isCommand()) return;
-	const { commandName } = interaction;
-	if (commandName === 'ping') {
-		logger.info('Asked for a ping command')
-		await interaction.reply('Pong!');
-	} else if (commandName === 'adds') {
-		screamcount = screamcount + 1
-		logger.info('Current scream count : ' + screamcount)
-		await interaction.reply('Scream added. Current scream count : ' + screamcount)
-	} else if (commandName == 'resets') {
-		logger.info('Asked for the resets command')
-		screamcount = 0
-		await interaction.reply('Scream added. Current scream count : ' + screamcount)
-	} else if (commandName === 'sets') {
-		logger.info('Asked for the sets command')
-		screamcount = interaction.options.getInteger("value")
-		await interaction.reply('Scream counter set ! Current scream count : ' + screamcount)
+	if (whitelist.includes(interaction.user.tag)) {
+		if (!interaction.isCommand()) return;
+		const { commandName } = interaction;
+		if (commandName === 'ping') {
+			logger.info('Asked for a ping command')
+			await interaction.reply('Pong!');
+		} else if (commandName === 'adds') {
+			screamcount = screamcount + 1
+			logger.info('Current scream count : ' + screamcount)
+			await interaction.reply('Scream added. Current scream count : ' + screamcount)
+		} else if (commandName == 'resets') {
+			logger.info('Asked for the resets command')
+			screamcount = 0
+			await interaction.reply('Scream added. Current scream count : ' + screamcount)
+		} else if (commandName === 'sets') {
+			logger.info('Asked for the sets command')
+			screamcount = interaction.options.getInteger("value")
+			await interaction.reply('Scream counter set ! Current scream count : ' + screamcount)
+		}
+	}else{
+		interaction.reply(`Sorry, you're not one of my masters :/`)
 	}
+
 });
 
 client.login(token);
