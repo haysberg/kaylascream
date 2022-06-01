@@ -61,8 +61,16 @@ app.get('/', (req, res) => {
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Refresh" content="10">
 		<style>
-		@font-face{font-family:"kontikialohajf-regular"; src:url("https://kscreams.haysberg.io/kontiki.ttf") format("woff"),url("https://kscreams.haysberg.io/kontiki.ttf") format("opentype"),url("https://kscreams.haysberg.io/kontiki.ttf") format("truetype");}
+		@font-face {
+			font-family: 'Kon Tiki Aloha';
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+			src: url(https://kscreams.haysberg.io/kontiki.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		  }
 		</style>
 		<title>Kayla's scream counter</title>
 	</head>
