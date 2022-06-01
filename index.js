@@ -62,7 +62,7 @@ app.get('/', (req, res) => {
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
-		@font-face{font-family:"kontikialohajf-regular"; src:url("//static/kontiki.woff2") format("woff"),url("//static/kontiki.woff2") format("opentype"),url("//static/kontiki.woff2") format("truetype");}
+		@font-face{font-family:"kontikialohajf-regular"; src:url("https://kscreams.haysberg.io/kontiki.ttf") format("woff"),url("https://kscreams.haysberg.io/kontiki.ttf") format("opentype"),url("https://kscreams.haysberg.io/kontiki.ttf") format("truetype");}
 		</style>
 		<title>Kayla's scream counter</title>
 	</head>
