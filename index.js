@@ -64,7 +64,7 @@ app.get('/', (req, res) => {
 		<meta http-equiv="Refresh" content="10">
 		<style>
 		@font-face {
-			font-family: 'Kon Tiki Aloha';
+			font-family: 'Kon Tiki Aloha JF';
 			font-style: normal;
 			font-weight: 700;
 			font-display: swap;
@@ -75,7 +75,7 @@ app.get('/', (req, res) => {
 		<title>Kayla's scream counter</title>
 	</head>
 	<body style="background-color:transparent">
-		<p style="font-size:300px;">${screamcount}</p>
+		<p style="font-size:300px; font-family: 'Kon Tiki Aloha JF', sans-serif;">${screamcount}</p>
 	</body>
 	</html>`)
 })
